@@ -27,12 +27,13 @@
   <button @click="activeTab='TabC'">Tab C</button>
   <keep-alive>
     <component :is="activeTab"/>
-</keep-alive>
-  <!-- <TabA v-if="activeTab === 'TabA'" />
-  <TabB v-if="activeTab === 'TabB'" />
-  <TabC v-if="activeTab === 'TabC'" /> -->
-
+  </keep-alive>
+  <teleport to="#portal-root">
+    <PortalComp />
+  </teleport>
+  <PostList />
   </div>
+  <PostComp />
 </template>
 
 <script>
@@ -46,6 +47,9 @@ import NameList from './components/NameList.vue';
 import TabA from './components/TabA.vue'
 import TabB from './components/TabB.vue'
 import TabC from './components/TabC.vue'
+import PortalComp from './components/PortalComp.vue';
+import PostList from './components/PostList.vue';
+import PostComp from './components/PostComp.vue';
 
 export default {
   name: 'App',
@@ -59,14 +63,17 @@ export default {
     NameList,
     TabA,
     TabB,
-    TabC
+    TabC,
+    PortalComp,
+    PostList,
+    PostComp
   },
   data(){
     return {
       name: 'Filisberto',
-      position: 'babaca',
+      position: 'feliz',
       title: 'Title',
-      loggedUser: 'Chupacetas',
+      loggedUser: 'Joe',
       showPopup: false,
       activeTab: 'TabA'
     }
