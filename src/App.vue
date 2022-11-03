@@ -34,6 +34,10 @@
   <PostList />
   </div>
   <PostComp />
+  <TemplateRef />
+  <ClickCounter />
+  <DataComp />
+  <WatchComposition />
 </template>
 
 <script>
@@ -50,6 +54,10 @@ import TabC from './components/TabC.vue'
 import PortalComp from './components/PortalComp.vue';
 import PostList from './components/PostList.vue';
 import PostComp from './components/PostComp.vue';
+import TemplateRef from './components/TemplateRef.vue';
+import ClickCounter from './components/ClickCounter.vue';
+import DataComp from './components/DataComp.vue'
+import WatchComposition from './components/WatchComposition.vue';
 
 export default {
   name: 'App',
@@ -66,7 +74,11 @@ export default {
     TabC,
     PortalComp,
     PostList,
-    PostComp
+    PostComp,
+    TemplateRef,
+    ClickCounter,
+    DataComp,
+    WatchComposition
   },
   data(){
     return {

@@ -14,6 +14,9 @@
 
     export default {
         name: 'PostList',
+        // created(){
+        //     this.getPosts()
+        // },
         data() {
             return {
                 posts: [],
